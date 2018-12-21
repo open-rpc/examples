@@ -33,6 +33,14 @@
       "responses": {
         "success": {
           "description": "A paged array of pets",
+          "headers": {
+            "x-next": {
+              "description": "A link to the next page of responses",
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
           "content": {
             "schema": {
               "$ref": "#/components/schemas/Pets"
