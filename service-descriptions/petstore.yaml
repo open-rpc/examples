@@ -1,0 +1,150 @@
+{
+  "open-rpc": "1.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "OpenRPC Petstore",
+    "license": {
+      "name": "MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "methods": {
+    "list_pets": {
+      "summary": "List all pets",
+      "tags": [
+        "pets"
+      ],
+      "parameters": [
+        {
+          "name": "limit",
+          "in": "query",
+          "description": "How many items to return at one time (max 100)",
+          "required": false,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      ],
+      "responses": {
+        "success": {
+          "description": "A paged array of pets",
+          "content": {
+            "schema": {
+              "$ref": "#/components/schemas/Pets"
+            }
+          }
+        },
+        "error": {
+          "description": "unexpected error",
+          "content": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    },
+    "create_pet": {
+      "summary": "Create a pet",
+      "tags": [
+        "pets"
+      ],
+      "responses": {
+        "success": {
+          "description": "Null response"
+        },
+        "error": {
+          "description": "unexpected error",
+          "content": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    },
+    "get_pet": {
+      "summary": "Info for a specific pet",
+      "tags": [
+        "pets"
+      ],
+      "parameters": [
+        {
+          "name": "petId",
+          "in": "path",
+          "required": true,
+          "description": "The id of the pet to retrieve",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "success": {
+          "description": "Expected response to a valid request",
+          "content": {
+            "schema": {
+              "$ref": "#/components/schemas/Pets"
+            }
+          }
+        },
+        "error": {
+          "description": "unexpected error",
+          "content": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Pet": {
+          "required": [
+            "id",
+            "name"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "name": {
+              "type": "string"
+            },
+            "tag": {
+              "type": "string"
+            }
+          }
+        },
+        "Pets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/Pet"
+          }
+        },
+        "Error": {
+          "required": [
+            "code",
+            "message"
+          ],
+          "properties": {
+            "code": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "message": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
