@@ -46,14 +46,10 @@
       "responses": {
         "success": {
           "description": "pet response",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Pet"
-                }
-              }
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Pet"
             }
           }
         }
