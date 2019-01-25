@@ -1,0 +1,153 @@
+{
+  "openrpc": "0.0.1",
+  "info": {
+    "version": "1.0.0",
+    "title": "OpenRPC Petstore",
+    "description": "A sample API that uses a petstore as an example to demonstrate features in the OpenAPI 3.0 specification",
+    "termsOfService": "http://openrpc.io/terms/",
+    "contact": {
+      "name": "OpenRPC Team",
+      "email": "petstorerpcteam@openrpc.io",
+      "url": "http://openrpc.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://petstore.openrpc.io/api"
+    }
+  ],
+  "methods": {
+    "get_pets": {
+      "description": "Returns all pets from the system that the user has access to\nNam sed condimentum est. Maecenas tempor sagittis sapien, nec rhoncus sem sagittis sit amet. Aenean at gravida augue, ac iaculis sem. Curabitur odio lorem, ornare eget elementum nec, cursus id lectus. Duis mi turpis, pulvinar ac eros ac, tincidunt varius justo. In hac habitasse platea dictumst. Integer at adipiscing ante, a sagittis ligula. Aenean pharetra tempor ante molestie imperdiet. Vivamus id aliquam diam.",
+      "parameters": [
+        {
+          "name": "tags",
+          "description": "tags to filter by",
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "limit",
+          "description": "maximum number of results to return",
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      ],
+      "responses": {
+        "success": {
+          "description": "pet response",
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Pet"
+            }
+          }
+        }
+      }
+    },
+    "create_pet": {
+      "description": "Creates a new pet in the store.  Duplicates are allowed",
+      "parameters": {
+        "name": "pet",
+        "description": "Pet to add to the store.",
+        "schema": {
+          "$ref": "#/components/schemas/NewPet"
+        }
+      },
+      "responses": {
+        "success": {
+          "description": "the newly created pet",
+          "schema": {
+            "$ref": "#/components/schemas/Pet"
+          }
+        }
+      }
+    },
+    "get_pet_by_id": {
+      "description": "Returns a user based on a single ID, if the user does not have access to the pet",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "ID of pet to fetch",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      ],
+      "responses": {
+        "success": {
+          "description": "pet response",
+          "schema": {
+            "$ref": "#/components/schemas/Pet"
+          }
+        }
+      }
+    },
+    "delete_pet_by_id": {
+      "description": "deletes a single pet based on the ID supplied",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "ID of pet to delete",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      ],
+      "responses": {
+        "success": {
+          "description": "pet deleted"
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Pet": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NewPet"
+          },
+          {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ]
+      },
+      "NewPet": {
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "tag": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
