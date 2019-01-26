@@ -43,7 +43,7 @@
           }
         }
       ],
-      "success": {
+      "results": {
         "description": "pet response",
         "schema": {
           "type": "array",
@@ -62,7 +62,7 @@
           "$ref": "#/components/schemas/NewPet"
         }
       },
-      "success": {
+      "results": {
         "description": "the newly created pet",
         "schema": {
           "$ref": "#/components/schemas/Pet"
@@ -82,7 +82,7 @@
           }
         }
       ],
-      "success": {
+      "results": {
         "description": "pet response",
         "schema": {
           "$ref": "#/components/schemas/Pet"
@@ -102,7 +102,7 @@
           }
         }
       ],
-      "success": {
+      "results": {
         "description": "pet deleted"
       }
     }

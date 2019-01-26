@@ -15,7 +15,7 @@
           }
         }
       ],
-      "success": {
+      "results": {
         "description": "The User",
         "schema": {
           "$ref": "#/components/schemas/user"
@@ -37,7 +37,7 @@
           }
         }
       ],
-      "success": {
+      "results": {
         "description": "repositories owned by the supplied user",
         "schema": {
           "type": "array",
@@ -69,7 +69,7 @@
           }
         }
       ],
-      "success": {
+      "results": {
         "description": "The repository",
         "schema": {
           "$ref": "#/components/schemas/repository"
@@ -109,7 +109,7 @@
           }
         }
       ],
-      "success": {
+      "results": {
         "description": "an array of pull request objects",
         "schema": {
           "type": "array",
@@ -143,7 +143,7 @@
           }
         }
       ],
-      "success": {
+      "results": {
         "description": "a pull request object",
         "schema": {
           "$ref": "#/components/schemas/pullrequest"
@@ -179,8 +179,8 @@
           }
         }
       ],
-      "success": {
-        "description": "the PR was successfully merged"
+      "results": {
+        "description": "the PR was resultsfully merged"
       }
     }
   },
