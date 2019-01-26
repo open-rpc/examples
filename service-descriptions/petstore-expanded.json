@@ -43,14 +43,12 @@
           }
         }
       ],
-      "responses": {
-        "success": {
-          "description": "pet response",
-          "schema": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Pet"
-            }
+      "results": {
+        "description": "pet response",
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/Pet"
           }
         }
       }
@@ -64,12 +62,10 @@
           "$ref": "#/components/schemas/NewPet"
         }
       },
-      "responses": {
-        "success": {
-          "description": "the newly created pet",
-          "schema": {
-            "$ref": "#/components/schemas/Pet"
-          }
+      "results": {
+        "description": "the newly created pet",
+        "schema": {
+          "$ref": "#/components/schemas/Pet"
         }
       }
     },
@@ -86,12 +82,10 @@
           }
         }
       ],
-      "responses": {
-        "success": {
-          "description": "pet response",
-          "schema": {
-            "$ref": "#/components/schemas/Pet"
-          }
+      "results": {
+        "description": "pet response",
+        "schema": {
+          "$ref": "#/components/schemas/Pet"
         }
       }
     },
@@ -108,10 +102,8 @@
           }
         }
       ],
-      "responses": {
-        "success": {
-          "description": "pet deleted"
-        }
+      "results": {
+        "description": "pet deleted"
       }
     }
   },

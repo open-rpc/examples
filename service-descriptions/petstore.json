@@ -29,12 +29,10 @@
           }
         }
       ],
-      "responses": {
-        "success": {
-          "description": "A paged array of pets",
-          "schema": {
-            "$ref": "#/components/schemas/Pets"
-          }
+      "results": {
+        "description": "A paged array of pets",
+        "schema": {
+          "$ref": "#/components/schemas/Pets"
         }
       }
     },
@@ -43,10 +41,8 @@
       "tags": [
         "pets"
       ],
-      "responses": {
-        "success": {
-          "description": "Null response"
-        }
+      "results": {
+        "description": "Null response"
       }
     },
     "get_pet": {
@@ -64,39 +60,37 @@
           }
         }
       ],
-      "responses": {
-        "success": {
-          "description": "Expected response to a valid request",
-          "schema": {
-            "$ref": "#/components/schemas/Pets"
-          }
+      "results": {
+        "description": "Expected response to a valid request",
+        "schema": {
+          "$ref": "#/components/schemas/Pets"
         }
       }
-    },
-    "components": {
-      "schemas": {
-        "Pet": {
-          "required": [
-            "id",
-            "name"
-          ],
-          "properties": {
-            "id": {
-              "type": "integer",
-              "format": "int64"
-            },
-            "name": {
-              "type": "string"
-            },
-            "tag": {
-              "type": "string"
-            }
-          }
-        },
-        "Pets": {
-          "type": "array",
-          "items": {
-            "$ref": "#/components/schemas/Pet"
+    }
+  },
+  "components": {
+    "schemas": {
+      "Pets": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Pet"
+        }
+      },
+      "Pet": {
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "tag": {
+            "type": "string"
           }
         }
       }

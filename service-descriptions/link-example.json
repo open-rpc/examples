@@ -15,16 +15,14 @@
           }
         }
       ],
-      "responses": {
-        "success": {
-          "description": "The User",
-          "schema": {
-            "$ref": "#/components/schemas/user"
-          },
-          "links": {
-            "userRepositories": {
-              "$ref": "#/components/links/UserRepositories"
-            }
+      "results": {
+        "description": "The User",
+        "schema": {
+          "$ref": "#/components/schemas/user"
+        },
+        "links": {
+          "userRepositories": {
+            "$ref": "#/components/links/UserRepositories"
           }
         }
       }
@@ -39,19 +37,17 @@
           }
         }
       ],
-      "responses": {
-        "success": {
-          "description": "repositories owned by the supplied user",
-          "schema": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/repository"
-            }
-          },
-          "links": {
-            "userRepository": {
-              "$ref": "#/components/links/UserRepository"
-            }
+      "results": {
+        "description": "repositories owned by the supplied user",
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/repository"
+          }
+        },
+        "links": {
+          "userRepository": {
+            "$ref": "#/components/links/UserRepository"
           }
         }
       }
@@ -73,16 +69,14 @@
           }
         }
       ],
-      "responses": {
-        "success": {
-          "description": "The repository",
-          "schema": {
-            "$ref": "#/components/schemas/repository"
-          },
-          "links": {
-            "repositoryPullRequests": {
-              "$ref": "#/components/links/RepositoryPullRequests"
-            }
+      "results": {
+        "description": "The repository",
+        "schema": {
+          "$ref": "#/components/schemas/repository"
+        },
+        "links": {
+          "repositoryPullRequests": {
+            "$ref": "#/components/links/RepositoryPullRequests"
           }
         }
       }
@@ -115,14 +109,12 @@
           }
         }
       ],
-      "responses": {
-        "success": {
-          "description": "an array of pull request objects",
-          "schema": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/pullrequest"
-            }
+      "results": {
+        "description": "an array of pull request objects",
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/pullrequest"
           }
         }
       }
@@ -151,16 +143,14 @@
           }
         }
       ],
-      "responses": {
-        "success": {
-          "description": "a pull request object",
-          "schema": {
-            "$ref": "#/components/schemas/pullrequest"
-          },
-          "links": {
-            "pullRequestMerge": {
-              "$ref": "#/components/links/PullRequestMerge"
-            }
+      "results": {
+        "description": "a pull request object",
+        "schema": {
+          "$ref": "#/components/schemas/pullrequest"
+        },
+        "links": {
+          "pullRequestMerge": {
+            "$ref": "#/components/links/PullRequestMerge"
           }
         }
       }
@@ -189,10 +179,8 @@
           }
         }
       ],
-      "responses": {
-        "success": {
-          "description": "the PR was successfully merged"
-        }
+      "results": {
+        "description": "the PR was resultsfully merged"
       }
     }
   },
