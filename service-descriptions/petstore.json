@@ -12,8 +12,9 @@
       "url": "http://localhost:8080"
     }
   ],
-  "methods": {
-    "list_pets": {
+  "methods": [
+    {
+      "name": "list_pets",
       "summary": "List all pets",
       "tags": [
         "pets"
@@ -36,7 +37,8 @@
         }
       }
     },
-    "create_pet": {
+    {
+      "name": "create_pet",
       "summary": "Create a pet",
       "tags": [
         "pets"
@@ -45,7 +47,8 @@
         "description": "Null response"
       }
     },
-    "get_pet": {
+    {
+      "name": "get_pet",
       "summary": "Info for a specific pet",
       "tags": [
         "pets"
@@ -67,15 +70,9 @@
         }
       }
     }
-  },
+  ],
   "components": {
     "schemas": {
-      "Pets": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Pet"
-        }
-      },
       "Pet": {
         "required": [
           "id",
@@ -92,6 +89,12 @@
           "tag": {
             "type": "string"
           }
+        }
+      },
+      "Pets": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Pet"
         }
       }
     }

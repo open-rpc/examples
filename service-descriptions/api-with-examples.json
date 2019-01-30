@@ -4,8 +4,9 @@
     "title": "Simple RPC overview",
     "version": "2.0.0"
   },
-  "methods": {
-    "get_versions": {
+  "methods": [
+    {
+      "name": "get_versions",
       "summary": "List API versions",
       "results": {
         "example": {
@@ -38,7 +39,8 @@
         }
       }
     },
-    "get_version_details": {
+    {
+      "name": "get_version_details",
       "operationId": "getVersionDetailsv2",
       "summary": "Show API version details",
       "results": {
@@ -47,5 +49,5 @@
         }
       }
     }
-  }
+  ]
 }
