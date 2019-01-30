@@ -4,8 +4,9 @@
     "title": "Link Example",
     "version": "1.0.0"
   },
-  "methods": {
-    "get_user_by_name": {
+  "methods": [
+    {
+      "name": "get_user_by_name",
       "parameters": [
         {
           "name": "username",
@@ -19,15 +20,16 @@
         "description": "The User",
         "schema": {
           "$ref": "#/components/schemas/user"
-        },
-        "links": {
-          "userRepositories": {
-            "$ref": "#/components/links/UserRepositories"
-          }
+        }
+      },
+      "links": {
+        "userRepositories": {
+          "$ref": "#/components/links/UserRepositories"
         }
       }
     },
-    "get_repositories_by_owner": {
+    {
+      "name": "get_repositories_by_owner",
       "parameters": [
         {
           "name": "username",
@@ -44,15 +46,16 @@
           "items": {
             "$ref": "#/components/schemas/repository"
           }
-        },
-        "links": {
-          "userRepository": {
-            "$ref": "#/components/links/UserRepository"
-          }
+        }
+      },
+      "links": {
+        "userRepository": {
+          "$ref": "#/components/links/UserRepository"
         }
       }
     },
-    "get_repository": {
+    {
+      "name": "get_repository",
       "parameters": [
         {
           "name": "username",
@@ -73,15 +76,16 @@
         "description": "The repository",
         "schema": {
           "$ref": "#/components/schemas/repository"
-        },
-        "links": {
-          "repositoryPullRequests": {
-            "$ref": "#/components/links/RepositoryPullRequests"
-          }
+        }
+      },
+      "links": {
+        "repositoryPullRequests": {
+          "$ref": "#/components/links/RepositoryPullRequests"
         }
       }
     },
-    "get_pull_requests_by_repository": {
+    {
+      "name": "get_pull_requests_by_repository",
       "parameters": [
         {
           "name": "username",
@@ -119,7 +123,8 @@
         }
       }
     },
-    "get_pull_requests_by_id": {
+    {
+      "name": "get_pull_requests_by_id",
       "parameters": [
         {
           "name": "username",
@@ -147,15 +152,16 @@
         "description": "a pull request object",
         "schema": {
           "$ref": "#/components/schemas/pullrequest"
-        },
-        "links": {
-          "pullRequestMerge": {
-            "$ref": "#/components/links/PullRequestMerge"
-          }
+        }
+      },
+      "links": {
+        "pullRequestMerge": {
+          "$ref": "#/components/links/PullRequestMerge"
         }
       }
     },
-    "merge_pull_request": {
+    {
+      "name": "merge_pull_request",
       "parameters": [
         {
           "name": "username",
@@ -180,10 +186,10 @@
         }
       ],
       "results": {
-        "description": "the PR was resultsfully merged"
+        "description": "the PR was successfully merged"
       }
     }
-  },
+  ],
   "components": {
     "links": {
       "UserRepositories": {
