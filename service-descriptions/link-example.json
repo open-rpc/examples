@@ -16,7 +16,7 @@
           }
         }
       ],
-      "results": {
+      "result": {
         "description": "The User",
         "schema": {
           "$ref": "#/components/schemas/user"
@@ -39,7 +39,7 @@
           }
         }
       ],
-      "results": {
+      "result": {
         "description": "repositories owned by the supplied user",
         "schema": {
           "type": "array",
@@ -72,7 +72,7 @@
           }
         }
       ],
-      "results": {
+      "result": {
         "description": "The repository",
         "schema": {
           "$ref": "#/components/schemas/repository"
@@ -113,7 +113,7 @@
           }
         }
       ],
-      "results": {
+      "result": {
         "description": "an array of pull request objects",
         "schema": {
           "type": "array",
@@ -148,7 +148,7 @@
           }
         }
       ],
-      "results": {
+      "result": {
         "description": "a pull request object",
         "schema": {
           "$ref": "#/components/schemas/pullrequest"
@@ -185,7 +185,7 @@
           }
         }
       ],
-      "results": {
+      "result": {
         "description": "the PR was successfully merged"
       }
     }
@@ -195,29 +195,29 @@
       "UserRepositories": {
         "method": "get_repositories_by_owner",
         "params": {
-          "username": "$response.username"
+          "username": "$result.username"
         }
       },
       "UserRepository": {
         "method": "getRepository",
         "params": {
-          "username": "$response.owner.username",
-          "slug": "$response.slug"
+          "username": "$result.owner.username",
+          "slug": "$result.slug"
         }
       },
       "RepositoryPullRequests": {
         "operationId": "getPullRequestsByRepository",
         "params": {
-          "username": "$response.owner.username",
-          "slug": "$response.slug"
+          "username": "$result.owner.username",
+          "slug": "$result.slug"
         }
       },
       "PullRequestMerge": {
         "operationId": "mergePullRequest",
         "params": {
-          "username": "$response.author.username",
-          "slug": "$response.repository.slug",
-          "pid": "$response.id"
+          "username": "$result.author.username",
+          "slug": "$result.repository.slug",
+          "pid": "$result.id"
         }
       }
     },

@@ -30,7 +30,7 @@
           }
         }
       ],
-      "results": {
+      "result": {
         "description": "A paged array of pets",
         "schema": {
           "$ref": "#/components/schemas/Pets"
@@ -43,7 +43,7 @@
       "tags": [
         "pets"
       ],
-      "results": {
+      "result": {
         "description": "Null response"
       }
     },
@@ -63,7 +63,7 @@
           }
         }
       ],
-      "results": {
+      "result": {
         "description": "Expected response to a valid request",
         "schema": {
           "$ref": "#/components/schemas/Pets"
