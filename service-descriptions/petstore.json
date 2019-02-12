@@ -19,7 +19,7 @@
       "tags": [
         "pets"
       ],
-      "parameters": [
+      "params": [
         {
           "name": "limit",
           "description": "How many items to return at one time (max 100)",
@@ -53,7 +53,7 @@
       "tags": [
         "pets"
       ],
-      "parameters": [
+      "params": [
         {
           "name": "petId",
           "required": true,
