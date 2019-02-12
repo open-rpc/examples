@@ -7,7 +7,7 @@
   "methods": [
     {
       "name": "get_user_by_name",
-      "parameters": [
+      "params": [
         {
           "name": "username",
           "required": true,
@@ -30,7 +30,7 @@
     },
     {
       "name": "get_repositories_by_owner",
-      "parameters": [
+      "params": [
         {
           "name": "username",
           "required": true,
@@ -56,7 +56,7 @@
     },
     {
       "name": "get_repository",
-      "parameters": [
+      "params": [
         {
           "name": "username",
           "required": true,
@@ -86,7 +86,7 @@
     },
     {
       "name": "get_pull_requests_by_repository",
-      "parameters": [
+      "params": [
         {
           "name": "username",
           "required": true,
@@ -125,7 +125,7 @@
     },
     {
       "name": "get_pull_requests_by_id",
-      "parameters": [
+      "params": [
         {
           "name": "username",
           "required": true,
@@ -162,7 +162,7 @@
     },
     {
       "name": "merge_pull_request",
-      "parameters": [
+      "params": [
         {
           "name": "username",
           "required": true,
@@ -194,27 +194,27 @@
     "links": {
       "UserRepositories": {
         "method": "get_repositories_by_owner",
-        "parameters": {
+        "params": {
           "username": "$response.username"
         }
       },
       "UserRepository": {
         "method": "getRepository",
-        "parameters": {
+        "params": {
           "username": "$response.owner.username",
           "slug": "$response.slug"
         }
       },
       "RepositoryPullRequests": {
         "operationId": "getPullRequestsByRepository",
-        "parameters": {
+        "params": {
           "username": "$response.owner.username",
           "slug": "$response.slug"
         }
       },
       "PullRequestMerge": {
         "operationId": "mergePullRequest",
-        "parameters": {
+        "params": {
           "username": "$response.author.username",
           "slug": "$response.repository.slug",
           "pid": "$response.id"
