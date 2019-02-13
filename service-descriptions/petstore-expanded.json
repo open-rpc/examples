@@ -57,13 +57,15 @@
     {
       "name": "create_pet",
       "description": "Creates a new pet in the store.  Duplicates are allowed",
-      "params": {
-        "name": "pet",
-        "description": "Pet to add to the store.",
-        "schema": {
-          "$ref": "#/components/schemas/NewPet"
+      "params": [
+        {
+          "name": "pet",
+          "description": "Pet to add to the store.",
+          "schema": {
+            "$ref": "#/components/schemas/NewPet"
+          }
         }
-      },
+      ],
       "result": {
         "description": "the newly created pet",
         "schema": {
