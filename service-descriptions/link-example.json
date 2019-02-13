@@ -48,11 +48,11 @@
           }
         }
       },
-      "links": {
-        "userRepository": {
+      "links": [
+        {
           "$ref": "#/components/links/UserRepository"
         }
-      }
+      ]
     },
     {
       "name": "get_repository",
@@ -78,11 +78,11 @@
           "$ref": "#/components/schemas/repository"
         }
       },
-      "links": {
-        "repositoryPullRequests": {
+      "links": [
+        {
           "$ref": "#/components/links/RepositoryPullRequests"
         }
-      }
+      ]
     },
     {
       "name": "get_pull_requests_by_repository",
@@ -206,14 +206,14 @@
         }
       },
       "RepositoryPullRequests": {
-        "operationId": "getPullRequestsByRepository",
+        "method": "getPullRequestsByRepository",
         "params": {
           "username": "$result.owner.username",
           "slug": "$result.slug"
         }
       },
       "PullRequestMerge": {
-        "operationId": "mergePullRequest",
+        "method": "mergePullRequest",
         "params": {
           "username": "$result.author.username",
           "slug": "$result.repository.slug",
