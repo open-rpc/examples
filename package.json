@@ -12,7 +12,7 @@
     "url": "git+https://github.com/open-rpc/examples.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/open-rpc/examples/issues"
   },
