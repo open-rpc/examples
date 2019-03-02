@@ -9,7 +9,7 @@
     {
       "name": "addition",
       "params": [
-        { "$ref": "#/components/contentDescriptors/Integer" },
+        { "type": "integer" },
         { "$ref": "#/components/contentDescriptors/Integer" }
       ],
       "result": {
