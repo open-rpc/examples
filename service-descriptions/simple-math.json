@@ -31,6 +31,32 @@
           "result": { "$ref": "#/components/examples/integerEight" }
         }
       ]
+    },
+    {
+      "name": "subtraction",
+      "params": [
+        { "$ref": "#/components/contentDescriptors/Integer" },
+        { "$ref": "#/components/contentDescriptors/Integer" }
+      ],
+      "result": {
+        "$ref": "#/components/contentDescriptors/Integer"
+      },
+      "examples": [
+        {
+          "params": [
+            { "$ref": "#/components/examples/integerFour" },
+            { "$ref": "#/components/examples/integerTwo" }
+          ],
+          "result": { "$ref": "#/components/examples/integerTwo" }
+        },
+        {
+          "params": [
+            { "$ref": "#/components/examples/integerEight" },
+            { "$ref": "#/components/examples/integerFour" }
+          ],
+          "result": { "$ref": "#/components/examples/integerFour" }
+        }
+      ]
     }
   ],
   "components": {
