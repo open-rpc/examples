@@ -1,0 +1,92 @@
+{
+  "openrpc": "1.0.0-rc1",
+  "info": {
+    "title": "Simple Math",
+    "description": "A simple math example",
+    "version": "1.0.0"
+  },
+  "methods": [
+    {
+      "name": "addition",
+      "params": [
+        { "$ref": "#/components/contentDescriptors/Integer" },
+        { "$ref": "#/components/contentDescriptors/Integer" }
+      ],
+      "result": {
+        "$ref": "#/components/contentDescriptors/Integer"
+      },
+      "examples": [
+        {
+          "params": [
+            { "$ref": "#/components/examples/integerTwo" },
+            { "$ref": "#/components/examples/integerTwo" }
+          ],
+          "result": { "$ref": "#/components/examples/integerFour" }
+        },
+        {
+          "params": [
+            { "$ref": "#/components/examples/integerFour" },
+            { "$ref": "#/components/examples/integerFour" }
+          ],
+          "result": { "$ref": "#/components/examples/integerEight" }
+        }
+      ]
+    },
+    {
+      "name": "subtraction",
+      "params": [
+        { "$ref": "#/components/contentDescriptors/Integer" },
+        { "$ref": "#/components/contentDescriptors/Integer" }
+      ],
+      "result": {
+        "$ref": "#/components/contentDescriptors/Integer"
+      },
+      "examples": [
+        {
+          "params": [
+            { "$ref": "#/components/examples/integerFour" },
+            { "$ref": "#/components/examples/integerTwo" }
+          ],
+          "result": { "$ref": "#/components/examples/integerTwo" }
+        },
+        {
+          "params": [
+            { "$ref": "#/components/examples/integerEight" },
+            { "$ref": "#/components/examples/integerFour" }
+          ],
+          "result": { "$ref": "#/components/examples/integerFour" }
+        }
+      ]
+    }
+  ],
+  "components": {
+    "contentDescriptors": {
+      "Integer": {
+        "name": "Integer",
+        "schema": {
+          "type": "integer"
+        }
+      }
+    },
+    "examples": {
+      "integerTwo": {
+        "name": "two",
+        "summary": "its a sample foo",
+        "description": "Im not sure how else to say it",
+        "value": 2
+      },
+      "integerFour": {
+        "name": "four",
+        "summary": "its a sample foo",
+        "description": "Im not sure how else to say it",
+        "value": 4
+      },
+      "integerEight": {
+        "name": "eight",
+        "summary": "its a sample eight",
+        "description": "Im not sure how else to say eight",
+        "value": 8
+      }
+    }
+  }
+}
