@@ -17,6 +17,7 @@
       },
       "examples": [
         {
+          "name": "simpleMathAdditionTwo",
           "params": [
             { "$ref": "#/components/examples/integerTwo" },
             { "$ref": "#/components/examples/integerTwo" }
@@ -24,6 +25,7 @@
           "result": { "$ref": "#/components/examples/integerFour" }
         },
         {
+          "name": "simpleMathAdditionTwo",
           "params": [
             { "$ref": "#/components/examples/integerFour" },
             { "$ref": "#/components/examples/integerFour" }
@@ -43,6 +45,7 @@
       },
       "examples": [
         {
+          "name": "examplesSubtractFourTwo",
           "params": [
             { "$ref": "#/components/examples/integerFour" },
             { "$ref": "#/components/examples/integerTwo" }
@@ -50,6 +53,7 @@
           "result": { "$ref": "#/components/examples/integerTwo" }
         },
         {
+          "name": "examplesSubtractEightFour",
           "params": [
             { "$ref": "#/components/examples/integerEight" },
             { "$ref": "#/components/examples/integerFour" }
