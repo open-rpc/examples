@@ -38,7 +38,7 @@
       "Integer": {
         "name": "Integer",
         "schema": {
-          "type": "number"
+          "type": "integer"
         }
       }
     },
