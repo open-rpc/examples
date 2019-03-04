@@ -157,11 +157,9 @@
           "$ref": "#/components/schemas/pullrequest"
         }
       },
-      "links": {
-        "pullRequestMerge": {
-          "$ref": "#/components/links/PullRequestMerge"
-        }
-      }
+      "links": [
+        { "$ref": "#/components/links/PullRequestMerge" }
+      ]
     },
     {
       "name": "merge_pull_request",
