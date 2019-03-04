@@ -23,11 +23,9 @@
           "$ref": "#/components/schemas/user"
         }
       },
-      "links": {
-        "userRepositories": {
-          "$ref": "#/components/links/UserRepositories"
-        }
-      }
+      "links": [
+        "$ref": "#/components/links/UserRepositories"
+      ]
     },
     {
       "name": "get_repositories_by_owner",
