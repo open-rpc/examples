@@ -17,7 +17,9 @@
       "name": "list_pets",
       "summary": "List all pets",
       "tags": [
-        "pets"
+        {
+          "name": "pets"
+        }
       ],
       "params": [
         {
@@ -41,7 +43,9 @@
       "name": "create_pet",
       "summary": "Create a pet",
       "tags": [
-        "pets"
+        {
+          "name": "pets"
+        }
       ],
       "result": {
         "description": "Null response"
@@ -51,7 +55,9 @@
       "name": "get_pet",
       "summary": "Info for a specific pet",
       "tags": [
-        "pets"
+        {
+          "name": "pets"
+        }
       ],
       "params": [
         {
