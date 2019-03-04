@@ -24,7 +24,7 @@
         }
       },
       "links": [
-        "$ref": "#/components/links/UserRepositories"
+        { "$ref": "#/components/links/UserRepositories" }
       ]
     },
     {
