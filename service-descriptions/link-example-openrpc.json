@@ -17,6 +17,7 @@
         }
       ],
       "result": {
+        "name": "user",
         "description": "The User",
         "schema": {
           "$ref": "#/components/schemas/user"
@@ -40,6 +41,7 @@
         }
       ],
       "result": {
+        "name": "repositories",
         "description": "repositories owned by the supplied user",
         "schema": {
           "type": "array",
@@ -73,6 +75,7 @@
         }
       ],
       "result": {
+        "name": "repository",
         "description": "The repository",
         "schema": {
           "$ref": "#/components/schemas/repository"
@@ -114,6 +117,7 @@
         }
       ],
       "result": {
+        "name": "pullrequests",
         "description": "an array of pull request objects",
         "schema": {
           "type": "array",
@@ -149,6 +153,7 @@
         }
       ],
       "result": {
+        "name": "pullrequest",
         "description": "a pull request object",
         "schema": {
           "$ref": "#/components/schemas/pullrequest"
