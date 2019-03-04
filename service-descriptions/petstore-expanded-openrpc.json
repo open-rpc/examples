@@ -45,6 +45,7 @@
         }
       ],
       "result": {
+        "name": "pet",
         "description": "pet response",
         "schema": {
           "type": "array",
@@ -67,6 +68,7 @@
         }
       ],
       "result": {
+        "name": "pet",
         "description": "the newly created pet",
         "schema": {
           "$ref": "#/components/schemas/Pet"
@@ -88,6 +90,7 @@
         }
       ],
       "result": {
+        "name": "pet",
         "description": "pet response",
         "schema": {
           "$ref": "#/components/schemas/Pet"
@@ -109,6 +112,7 @@
         }
       ],
       "result": {
+        "name": "pet",
         "description": "pet deleted"
       }
     }
