@@ -1,6 +1,6 @@
 {
   "name": "@open-rpc/examples",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "OpenRPC examples package. It exports JSON as a js module.",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/open-rpc/examples#readme",
   "dependencies": {
     "@open-rpc/meta-schema": "^1.0.2"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
   }
 }
