@@ -1,5 +1,5 @@
 const metaSchema = require('@open-rpc/meta-schema');
-const openRpcExamples = require('@open-rpc/examples');
+const openRpcExamples = require('./index.js');
 var Ajv = require('ajv');
 var ajv = new Ajv();
 
