@@ -8,6 +8,7 @@
     {
       "name": "get_versions",
       "summary": "List API versions",
+      "params": [],
       "result": {
         "name": "get_version_result",
         "schema": {
@@ -55,6 +56,7 @@
     {
       "name": "get_version_details",
       "summary": "Show API version details",
+      "params": [],
       "result": {
         "name": "foo",
         "schema": {

@@ -1,6 +1,6 @@
 {
   "name": "@open-rpc/examples",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "OpenRPC examples package. It exports JSON as a js module.",
   "main": "index.js",
   "scripts": {
