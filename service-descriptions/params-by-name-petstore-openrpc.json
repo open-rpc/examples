@@ -50,6 +50,7 @@
           "name": "pets"
         }
       ],
+      "params": [],
       "result": {
         "name": "null",
         "description": "Null response"
