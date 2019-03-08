@@ -1,4 +1,4 @@
 # examples
 Collection of example OpenRPC service definition files
 
-[![Dependabot badge](https://img.shields.io/badge/Dependabot-enabled-brightgreen.svg?logo=dependabot)](https://dependabot.com/)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=open-rpc/examples)](https://dependabot.com)
