@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/open-rpc/examples#readme",
   "dependencies": {
-    "@open-rpc/meta-schema": "^1.0.2"
+    "@open-rpc/meta-schema": "^1.0.2",
+    "node-fetch": "^2.3.0"
   },
   "devDependencies": {
     "jest": "^24.1.0"
