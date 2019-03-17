@@ -60,7 +60,7 @@
       "description": "Creates a new pet in the store.  Duplicates are allowed",
       "params": [
         {
-          "name": "pet",
+          "name": "newPet",
           "description": "Pet to add to the store.",
           "schema": {
             "$ref": "#/components/schemas/NewPet"
