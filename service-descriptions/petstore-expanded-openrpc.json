@@ -138,6 +138,7 @@
         ]
       },
       "NewPet": {
+        "type": "object",
         "required": [
           "name"
         ],
