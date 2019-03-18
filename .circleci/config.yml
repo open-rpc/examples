@@ -1,41 +1,80 @@
 version: 2
+
+aliases:
+  # -------------------------
+  #      ALIASES: Caches
+  # -------------------------
+  - &restore-deps-cache
+    key: deps-cache-{{ checksum "package.json" }}
+
+  - &save-deps-cache
+    key: deps-cache-{{ checksum "package.json" }}
+    paths:
+      - ~/build/node_modules
+
+  # -------------------------
+  #  ALIASES: Branch Filters
+  # -------------------------
+  - &filter-only-master
+    branches:
+      only: master
+  - &filter-only-semantic-pr
+    branches:
+      only:  /^(fix|feat)\/.*$/
+
 jobs:
   test:
     docker:
       - image: circleci/node:10
     steps:
+      - restore_cache: *restore-deps-cache
       - checkout
       - run: npm install
       - run: npm test
+      - save_cache: *save-deps-cache
 
   build:
     docker:
       - image: circleci/node:10
     steps:
+      - restore_cache: *restore-deps-cache
       - checkout
       - run: npm install
       - run: npm run build
+      - save_cache: *save-deps-cache
 
   release:
     docker:
       - image: circleci/node:10
     steps:
+      - restore_cache: *restore-deps-cache
       - checkout
       - run: npm install
-      - run: npm run build
       - run: npx semantic-release
+      - save_cache: *save-deps-cache
 
 workflows:
   version: 2
-  build_and_test:
+  analysis:
     jobs:
-      - test
-      - build
+      - test:
+          filters: *filter-only-semantic-pr
+      - build:
+          filters: *filter-only-semantic-pr
+
+  release:
+    jobs:
+      - test:
+          filters: *filter-only-master
+      - build:
+          filters: *filter-only-master
       - hold:
+          filters: *filter-only-master
           type: approval
           requires:
             - test
             - build
       - release:
+          filters: *filter-only-master
           requires:
             - hold
