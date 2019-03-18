@@ -11,8 +11,6 @@ interface IExamples {
   [key: string]: types.OpenRPC;
 }
 
-console.log(JSON.stringify(petstore, undefined, '  '));
-
 const example = petstore as types.OpenRPC;
 
 const examples: IExamples = {
