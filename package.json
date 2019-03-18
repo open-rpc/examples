@@ -1,12 +1,12 @@
 {
   "name": "@open-rpc/examples",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "OpenRPC examples package. It exports JSON as a js module.",
   "main": "build/src/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && npm run lint && jest src/test.js",
-    "lint": "tslint -c tslint.json 'src/index.ts' --fix",
+    "test": "npm run lint && npm run build && jest",
+    "lint": "tslint -c tslint.json 'src/*.ts' --fix",
     "publish": "npm run test && npm run build && npm publish --access=public",
     "test:watch": "npm run test -- --watch"
   },
@@ -28,7 +28,10 @@
     "build"
   ],
   "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node-fetch": "^2.1.6",
     "jest": "^24.3.1",
+    "ts-jest": "^24.0.0",
     "tslint": "^5.14.0",
     "typescript": "^3.3.3333"
   },

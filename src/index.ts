@@ -21,3 +21,5 @@ const examples: IExamples = {
   petstoreExpanded: petstoreExpanded as types.OpenRPC,
   simpleMath: simpleMath as types.OpenRPC,
 };
+
+export default examples;
