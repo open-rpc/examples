@@ -27,8 +27,8 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
-      - restore_cache: *restore-deps-cache
       - checkout
+      - restore_cache: *restore-deps-cache
       - run: npm install
       - run: npm test
       - save_cache: *save-deps-cache
@@ -37,8 +37,8 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
-      - restore_cache: *restore-deps-cache
       - checkout
+      - restore_cache: *restore-deps-cache
       - run: npm install
       - run: npm run build
       - save_cache: *save-deps-cache
@@ -47,8 +47,8 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
-      - restore_cache: *restore-deps-cache
       - checkout
+      - restore_cache: *restore-deps-cache
       - run: npm install
       - run: npx semantic-release
       - save_cache: *save-deps-cache
