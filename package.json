@@ -7,7 +7,7 @@
     "build": "tsc",
     "test": "npm run lint && npm run build && jest",
     "lint": "tslint -c tslint.json 'src/*.ts' --fix",
-    "publish": "npm run test && npm run build && npm publish --access=public",
+    "publish": "npm run test && npm run build",
     "test:watch": "npm run test -- --watch"
   },
   "repository": {
