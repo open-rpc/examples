@@ -39,9 +39,9 @@ workflows:
   analysis:
     jobs:
       - test:
-          filters: *filter-only-master
+          filters: *filter-only-semantic-pr
       - build:
-          filters: *filter-only-master
+          filters: *filter-only-semantic-pr
 
   release:
     jobs:
