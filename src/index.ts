@@ -7,7 +7,7 @@ import links from "../service-descriptions/link-example-openrpc.json";
 import apiWithExamples from "../service-descriptions/api-with-examples-openrpc.json";
 import simpleMath from "../service-descriptions/simple-math-openrpc.json";
 
-interface IExamples {
+export interface IExamples {
   [key: string]: types.OpenRPC;
 }
 
