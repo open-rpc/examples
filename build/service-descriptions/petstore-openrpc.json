@@ -1,0 +1,141 @@
+{
+    "openrpc": "1.0.0-rc1",
+    "info": {
+        "version": "1.0.0",
+        "title": "OpenRPC Petstore",
+        "license": {
+            "name": "MIT"
+        }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "methods": [
+        {
+            "name": "list_pets",
+            "summary": "List all pets",
+            "tags": [
+                {
+                    "name": "pets"
+                }
+            ],
+            "params": [
+                {
+                    "name": "limit",
+                    "description": "How many items to return at one time (max 100)",
+                    "required": false,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                }
+            ],
+            "result": {
+                "name": "pets",
+                "description": "A paged array of pets",
+                "schema": {
+                    "$ref": "#/components/schemas/Pets"
+                }
+            },
+            "errors": [
+                {
+                    "code": 100,
+                    "message": "pets busy"
+                }
+            ],
+            "examples": [
+                {
+                    "name": "listPetExample",
+                    "description": "List pet example",
+                    "params": [
+                        {
+                            "name": "limitExample",
+                            "value": 1
+                        }
+                    ],
+                    "result": {
+                        "name": "listPetResultExample",
+                        "value": [
+                            {
+                                "id": 7,
+                                "name": "fluffy",
+                                "tag": "poodle"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "create_pet",
+            "summary": "Create a pet",
+            "tags": [
+                {
+                    "name": "pets"
+                }
+            ],
+            "params": [],
+            "result": {
+                "name": "null",
+                "description": "Null response"
+            }
+        },
+        {
+            "name": "get_pet",
+            "summary": "Info for a specific pet",
+            "tags": [
+                {
+                    "name": "pets"
+                }
+            ],
+            "params": [
+                {
+                    "name": "petId",
+                    "required": true,
+                    "description": "The id of the pet to retrieve",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "result": {
+                "name": "pets",
+                "description": "Expected response to a valid request",
+                "schema": {
+                    "$ref": "#/components/schemas/Pets"
+                }
+            }
+        }
+    ],
+    "components": {
+        "schemas": {
+            "Pet": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "name"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "tag": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Pets": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/Pet"
+                }
+            }
+        }
+    }
+}
