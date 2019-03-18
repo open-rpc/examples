@@ -61,8 +61,6 @@ workflows:
           filters: *filter-only-semantic-pr
       - build:
           filters: *filter-only-semantic-pr
-          requires:
-            - test
 
   release:
     jobs:
