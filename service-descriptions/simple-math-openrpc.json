@@ -9,8 +9,8 @@
     {
       "name": "addition",
       "params": [
-        { "name": "a", schema: { "$ref": "#/components/schemas/Integer" } },
-        { "name": "b", schema: { "$ref": "#/components/schemas/Integer" } }
+        { "name": "a", "schema": { "$ref": "#/components/schemas/Integer" } },
+        { "name": "b", "schema": { "$ref": "#/components/schemas/Integer" } }
       ],
       "result": {
         "$ref": "#/components/contentDescriptors/Integer"
@@ -37,8 +37,8 @@
     {
       "name": "subtraction",
       "params": [
-        { "name": "a", schema: { "$ref": "#/components/schemas/Integer" } },
-        { "name": "b", schema: { "$ref": "#/components/schemas/Integer" } }
+        { "name": "a", "schema": { "$ref": "#/components/schemas/Integer" } },
+        { "name": "b", "schema": { "$ref": "#/components/schemas/Integer" } }
       ],
       "result": {
         "$ref": "#/components/contentDescriptors/Integer"
