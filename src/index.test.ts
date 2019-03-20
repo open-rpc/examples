@@ -1,7 +1,6 @@
 import metaSchema, { types } from "@open-rpc/meta-schema";
 import { parse } from "@open-rpc/schema-utils-js";
 import openRpcExamples from "./index";
-import fetch from "node-fetch";
 import { forEach } from "lodash";
 
 describe("meta-schema validates all examples without error", () => {
