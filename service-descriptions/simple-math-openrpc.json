@@ -64,6 +64,14 @@
     }
   ],
   "components": {
+    "contentDescriptors": {
+      "Integer": {
+        "name": "Integer",
+        "schema": {
+          "type": "integer"
+        }
+      }
+    },
     "schemas": {
       "Integer": {
         "type": "integer"
