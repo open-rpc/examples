@@ -80,7 +80,9 @@
       "result": {
         "name": "null",
         "description": "Null response",
-        "type": "null"
+        "schema": {
+          type": "null"
+        }
       }
     },
     {
