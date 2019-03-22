@@ -81,7 +81,7 @@
         "name": "null",
         "description": "Null response",
         "schema": {
-          type": "null"
+          "type": "null"
         }
       }
     },
