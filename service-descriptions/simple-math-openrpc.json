@@ -32,6 +32,17 @@
           ],
           "result": { "$ref": "#/components/examples/integerEight" }
         }
+      ],
+      "links": [
+        {
+          "name": "subtractionLink",
+          "description": "use the parameters from addition for subtraction",
+          "method": "subtraction",
+          "params": {
+            "a": "$params.a",
+            "b": "$params.b"
+          }
+        }
       ]
     },
     {
@@ -60,6 +71,17 @@
           ],
           "result": { "$ref": "#/components/examples/integerFour" }
         }
+      ],
+      "links": [
+        {
+          "name": "additionLink",
+          "description": "use the parameters from subtraction for addition",
+          "method": "addition",
+          "params": {
+            "a": "$params.a",
+            "b": "$params.b"
+          }
+        }
       ]
     }
   ],
@@ -80,14 +102,14 @@
     "examples": {
       "integerTwo": {
         "name": "two",
-        "summary": "its a sample foo",
-        "description": "Im not sure how else to say it",
+        "summary": "its a sample two",
+        "description": "Im not sure how else to say two",
         "value": 2
       },
       "integerFour": {
         "name": "four",
-        "summary": "its a sample foo",
-        "description": "Im not sure how else to say it",
+        "summary": "its a sample four",
+        "description": "Im not sure how else to say four",
         "value": 4
       },
       "integerEight": {
