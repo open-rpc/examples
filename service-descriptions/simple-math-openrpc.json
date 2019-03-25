@@ -5,6 +5,30 @@
     "description": "A simple math example",
     "version": "1.0.0"
   },
+  "servers": [
+    {
+      "name": "my simple math server",
+      "summary": "simple math server summary",
+      "description": "simple math server description",
+      "url": "http://{username}.simple-math.example.org:{port}/{basePath}/",
+      "variables": {
+        "username": {
+          "default": "demo",
+          "description": "this is applied to the url as the subdomain"
+        },
+        "port": {
+          "default": "443",
+          "enum": [
+            "8545",
+            "443"
+          ]
+        },
+        "basePath": {
+          "default": "jsonrpc"
+        }
+      }
+    }
+  ],
   "methods": [
     {
       "name": "addition",
