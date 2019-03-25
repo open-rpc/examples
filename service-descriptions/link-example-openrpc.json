@@ -195,6 +195,13 @@
   "components": {
     "links": {
       "UserRepositories": {
+        "description": "Get the repositories by owner.",
+        "summary": "Get the repos by owner",
+        "server":{
+          "name": "Other Server Name",
+          "description": "Use other server instead",
+          "url": "http://localhost:9210"
+        },
         "method": "get_repositories_by_owner",
         "params": {
           "username": "$result.username"
