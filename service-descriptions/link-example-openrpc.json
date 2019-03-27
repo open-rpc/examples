@@ -188,7 +188,8 @@
       ],
       "result": {
         "name": "merged",
-        "description": "the PR was successfully merged"
+        "description": "the PR was successfully merged",
+        "schema": {}
       }
     }
   ],

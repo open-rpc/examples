@@ -53,7 +53,10 @@
       "params": [],
       "result": {
         "name": "null",
-        "description": "Null response"
+        "description": "Null response",
+        "schema": {
+          "type": "null"
+        }
       }
     },
     {
