@@ -113,7 +113,8 @@
       ],
       "result": {
         "name": "pet",
-        "description": "pet deleted"
+        "description": "pet deleted",
+        "schema": {}
       }
     }
   ],
