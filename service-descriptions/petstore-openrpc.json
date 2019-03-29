@@ -55,7 +55,7 @@
               "value": 1
             }
           ],
-          "result":{
+          "result": {
             "name": "listPetResultExample",
             "value": [
               {
@@ -76,7 +76,20 @@
           "name": "pets"
         }
       ],
-      "params": [],
+      "params": [
+        {
+          "name": "newPetName",
+          "schema": {
+            "type": "string"
+          }
+        },
+         {
+          "name": "newPetTag",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
       "result": {
         "name": "null",
         "description": "Null response",
