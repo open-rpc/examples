@@ -10,7 +10,7 @@
       "name": "my simple math server",
       "summary": "simple math server summary",
       "description": "simple math server description",
-      "url": "http://{username}.simple-math.example.org:{port}/{basePath}/",
+      "url": "http://${username}.simple-math.example.org:${port}/${basePath}/",
       "variables": {
         "username": {
           "default": "demo",
