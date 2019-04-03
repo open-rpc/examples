@@ -37,7 +37,8 @@
         { "name": "b", "schema": { "$ref": "#/components/schemas/Integer" } }
       ],
       "result": {
-        "$ref": "#/components/contentDescriptors/Integer"
+        "name": "c",
+        "schema": { "$ref": "#/components/schemas/Integer" }
       },
       "examples": [
         {
@@ -76,7 +77,8 @@
         { "name": "b", "schema": { "$ref": "#/components/schemas/Integer" } }
       ],
       "result": {
-        "$ref": "#/components/contentDescriptors/Integer"
+        "name": "c",
+        "schema": { "$ref": "#/components/schemas/Integer" }
       },
       "examples": [
         {
@@ -110,14 +112,6 @@
     }
   ],
   "components": {
-    "contentDescriptors": {
-      "Integer": {
-        "name": "Integer",
-        "schema": {
-          "type": "integer"
-        }
-      }
-    },
     "schemas": {
       "Integer": {
         "type": "integer"
