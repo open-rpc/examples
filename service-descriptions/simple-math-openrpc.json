@@ -36,10 +36,7 @@
         { "name": "a", "schema": { "$ref": "#/components/schemas/Integer" } },
         { "name": "b", "schema": { "$ref": "#/components/schemas/Integer" } }
       ],
-      "result": {
-        "name": "c",
-        "schema": { "$ref": "#/components/schemas/Integer" }
-      },
+      "result": { "$ref": "#/components/contentDescriptors/c" },
       "examples": [
         {
           "name": "simpleMathAdditionTwo",
@@ -76,10 +73,7 @@
         { "name": "a", "schema": { "$ref": "#/components/schemas/Integer" } },
         { "name": "b", "schema": { "$ref": "#/components/schemas/Integer" } }
       ],
-      "result": {
-        "name": "c",
-        "schema": { "$ref": "#/components/schemas/Integer" }
-      },
+      "result": { "$ref": "#/components/contentDescriptors/c" },
       "examples": [
         {
           "name": "examplesSubtractFourTwo",
@@ -112,6 +106,14 @@
     }
   ],
   "components": {
+    "contentDescriptors": {
+      "c": {
+        "name": "c",
+        "schema": {
+          "type": "integer"
+        }
+      }
+    },
     "schemas": {
       "Integer": {
         "type": "integer"
