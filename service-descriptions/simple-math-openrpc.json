@@ -10,7 +10,7 @@
       "name": "my simple math server",
       "summary": "simple math server summary",
       "description": "simple math server description",
-      "url": "http://{username}.simple-math.example.org:{port}/{basePath}/",
+      "url": "http://${username}.simple-math.example.org:${port}/${basePath}/",
       "variables": {
         "username": {
           "default": "demo",
@@ -36,9 +36,7 @@
         { "name": "a", "schema": { "$ref": "#/components/schemas/Integer" } },
         { "name": "b", "schema": { "$ref": "#/components/schemas/Integer" } }
       ],
-      "result": {
-        "$ref": "#/components/contentDescriptors/Integer"
-      },
+      "result": { "$ref": "#/components/contentDescriptors/c" },
       "examples": [
         {
           "name": "simpleMathAdditionTwo",
@@ -75,9 +73,7 @@
         { "name": "a", "schema": { "$ref": "#/components/schemas/Integer" } },
         { "name": "b", "schema": { "$ref": "#/components/schemas/Integer" } }
       ],
-      "result": {
-        "$ref": "#/components/contentDescriptors/Integer"
-      },
+      "result": { "$ref": "#/components/contentDescriptors/c" },
       "examples": [
         {
           "name": "examplesSubtractFourTwo",
@@ -111,8 +107,8 @@
   ],
   "components": {
     "contentDescriptors": {
-      "Integer": {
-        "name": "Integer",
+      "c": {
+        "name": "c",
         "schema": {
           "type": "integer"
         }

@@ -205,29 +205,29 @@
         },
         "method": "get_repositories_by_owner",
         "params": {
-          "username": "$result.username"
+          "username": "${result.username}"
         }
       },
       "UserRepository": {
         "method": "getRepository",
         "params": {
-          "username": "$result.owner.username",
-          "slug": "$result.slug"
+          "username": "${result.owner.username}",
+          "slug": "${result.slug}"
         }
       },
       "RepositoryPullRequests": {
         "method": "getPullRequestsByRepository",
         "params": {
-          "username": "$result.owner.username",
-          "slug": "$result.slug"
+          "username": "${result.owner.username}",
+          "slug": "${result.slug}"
         }
       },
       "PullRequestMerge": {
         "method": "mergePullRequest",
         "params": {
-          "username": "$result.author.username",
-          "slug": "$result.repository.slug",
-          "pid": "$result.id"
+          "username": "${result.author.username}",
+          "slug": "${result.repository.slug}",
+          "pid": "${result.id}"
         }
       }
     },
