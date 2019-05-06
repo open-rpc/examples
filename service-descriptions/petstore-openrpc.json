@@ -120,7 +120,7 @@
          "name": "pets",
         "description": "Expected response to a valid request",
         "schema": {
-          "$ref": "#/components/schemas/Pets"
+          "$ref": "#/components/schemas/Pet"
         }
       }
     }
