@@ -47,7 +47,7 @@
           "result": { "$ref": "#/components/examples/integerFour" }
         },
         {
-          "name": "simpleMathAdditionTwo",
+          "name": "simpleMathAdditionFour",
           "params": [
             { "$ref": "#/components/examples/integerFour" },
             { "$ref": "#/components/examples/integerFour" }
