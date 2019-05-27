@@ -117,7 +117,7 @@
         }
       ],
       "result": {
-         "name": "pets",
+        "name": "pet",
         "description": "Expected response to a valid request",
         "schema": {
           "$ref": "#/components/schemas/Pet"
