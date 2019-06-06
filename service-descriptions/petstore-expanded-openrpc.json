@@ -2,7 +2,7 @@
   "openrpc": "1.0.0-rc1",
   "info": {
     "version": "1.0.0",
-    "title": "OpenRPC Petstore Expanded",
+    "title": "Petstore Expanded",
     "description": "A sample API that uses a petstore as an example to demonstrate features in the OpenAPI 3.0 specification",
     "termsOfService": "http://openrpc.io/terms/",
     "contact": {
