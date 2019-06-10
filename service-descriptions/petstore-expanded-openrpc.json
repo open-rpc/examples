@@ -39,8 +39,7 @@
           "name": "limit",
           "description": "maximum number of results to return",
           "schema": {
-            "type": "integer",
-            "format": "int32"
+            "type": "integer"
           }
         }
       ],
@@ -84,8 +83,7 @@
           "description": "ID of pet to fetch",
           "required": true,
           "schema": {
-            "type": "integer",
-            "format": "int64"
+            "type": "integer"
           }
         }
       ],
@@ -106,8 +104,7 @@
           "description": "ID of pet to delete",
           "required": true,
           "schema": {
-            "type": "integer",
-            "format": "int64"
+            "type": "integer"
           }
         }
       ],
@@ -131,8 +128,7 @@
             ],
             "properties": {
               "id": {
-                "type": "integer",
-                "format": "int64"
+                "type": "integer"
               }
             }
           }
