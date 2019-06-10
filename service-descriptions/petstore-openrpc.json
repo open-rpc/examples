@@ -27,8 +27,7 @@
           "description": "How many items to return at one time (max 100)",
           "required": false,
           "schema": {
-            "type": "integer",
-            "format": "int32"
+            "type": "integer"
           }
         }
       ],
@@ -135,8 +134,7 @@
         ],
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int64"
+            "type": "integer"
           },
           "name": {
             "type": "string"
