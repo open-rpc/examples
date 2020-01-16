@@ -4,13 +4,11 @@ import petstoreByName from "../service-descriptions/params-by-name-petstore-open
 import links from "../service-descriptions/link-example-openrpc.json";
 import apiWithExamples from "../service-descriptions/api-with-examples-openrpc.json";
 import simpleMath from "../service-descriptions/simple-math-openrpc.json";
-import { OpenRPC } from "@open-rpc/meta-schema";
+import { OpenrpcDocument as OpenRPC } from "@open-rpc/meta-schema";
 
 export interface IExamples {
   [key: string]: OpenRPC;
 }
-
-const example = petstore as OpenRPC;
 
 const examples: IExamples = {
   apiWithExamples: apiWithExamples as OpenRPC,
