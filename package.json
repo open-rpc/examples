@@ -30,9 +30,9 @@
     "@types/json-schema": "^7.0.3",
     "@types/lodash": "^4.14.123",
     "@types/node": "^13.1.0",
-    "jest": "^24.3.1",
+    "jest": "^25.1.0",
     "lodash": "^4.17.11",
-    "ts-jest": "^24.0.0",
+    "ts-jest": "^25.0.0",
     "tslint": "^6.0.0",
     "typescript": "^3.3.3333"
   },
