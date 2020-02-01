@@ -3,12 +3,12 @@
   "info": {
     "version": "1.0.0",
     "title": "Petstore Expanded",
-    "description": "A sample API that uses a petstore as an example to demonstrate features in the OpenAPI 3.0 specification",
-    "termsOfService": "http://openrpc.io/terms/",
+    "description": "A sample API that uses a petstore as an example to demonstrate features in the OpenRPC specification",
+    "termsOfService": "https://open-rpc.org",
     "contact": {
       "name": "OpenRPC Team",
-      "email": "petstorerpcteam@openrpc.io",
-      "url": "http://openrpc.io"
+      "email": "doesntexist@open-rpc.org",
+      "url": "https://open-rpc.org"
     },
     "license": {
       "name": "Apache 2.0",
@@ -17,7 +17,7 @@
   },
   "servers": [
     {
-      "url": "http://petstore.openrpc.io/api"
+      "url": "http://petstore.open-rpc.org"
     }
   ],
   "methods": [
