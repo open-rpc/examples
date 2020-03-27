@@ -23,9 +23,10 @@
   "files": [
     "build"
   ],
+  "dependencies": {
+    "@open-rpc/meta-schema": "^1.7.3"
+  },
   "devDependencies": {
-    "@open-rpc/meta-schema": "^1.7.3",
-    "@open-rpc/schema-utils-js": "^1.12.3",
     "@types/jest": "^25.1.0",
     "@types/json-schema": "^7.0.3",
     "@types/lodash": "^4.14.123",
@@ -34,7 +35,8 @@
     "lodash": "^4.17.11",
     "ts-jest": "^25.0.0",
     "tslint": "^6.0.0",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.3.3333",
+    "json-schema-ref-parser": "^7.0.1"
   },
   "keywords": [
     "open-rpc",
