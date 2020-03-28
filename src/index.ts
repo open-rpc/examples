@@ -6,11 +6,11 @@ import apiWithExamples from "../service-descriptions/api-with-examples-openrpc.j
 import simpleMath from "../service-descriptions/simple-math-openrpc.json";
 import { OpenrpcDocument as OpenRPC } from "@open-rpc/meta-schema";
 
-export interface IExamples {
+export interface Examples {
   [key: string]: OpenRPC;
 }
 
-const examples: IExamples = {
+const examples: Examples = {
   apiWithExamples: apiWithExamples as OpenRPC,
   links: links as OpenRPC,
   petstore: petstore as OpenRPC,

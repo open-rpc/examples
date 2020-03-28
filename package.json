@@ -5,8 +5,7 @@
   "main": "build/src/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "npm run lint && npm run build && jest",
-    "lint": "tslint -c tslint.json 'src/*.ts' --fix",
+    "test": "npm run build && jest",
     "publish": "npm run test && npm run build",
     "test:watch": "npm run test -- --watch"
   },
@@ -34,7 +33,6 @@
     "jest": "^25.1.0",
     "lodash": "^4.17.11",
     "ts-jest": "^25.0.0",
-    "tslint": "^6.0.0",
     "typescript": "^3.3.3333",
     "json-schema-ref-parser": "^7.0.1"
   },
