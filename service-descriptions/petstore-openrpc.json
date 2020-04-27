@@ -27,7 +27,8 @@
           "description": "How many items to return at one time (max 100)",
           "required": false,
           "schema": {
-            "type": "integer"
+            "type": "integer",
+            "minimum": 1
           }
         }
       ],
@@ -78,23 +79,42 @@
       "params": [
         {
           "name": "newPetName",
+          "description": "Name of pet to create",
+          "required": true,
           "schema": {
             "type": "string"
           }
         },
-         {
+        {
           "name": "newPetTag",
+          "description": "Pet tag to create",
           "schema": {
             "type": "string"
           }
         }
       ],
-      "result": {
-        "name": "null",
-        "description": "Null response",
-        "schema": {
-          "type": "null"
+      "examples": [
+        {
+          "name": "createPetExample",
+          "description": "Create pet example",
+          "params": [
+            {
+              "name": "newPetName",
+              "value": "fluffy"
+            },
+            {
+              "name": "tag",
+              "value": "poodle"
+            }
+          ],
+          "result": {
+            "name": "listPetResultExample",
+            "value": 7
+          }
         }
+      ],
+      "result": {
+        "$ref": "#/components/contentDescriptors/PetId"
       }
     },
     {
@@ -107,12 +127,7 @@
       ],
       "params": [
         {
-          "name": "petId",
-          "required": true,
-          "description": "The id of the pet to retrieve",
-          "schema": {
-            "type": "string"
-          }
+          "$ref": "#/components/contentDescriptors/PetId"
         }
       ],
       "result": {
@@ -121,11 +136,45 @@
         "schema": {
           "$ref": "#/components/schemas/Pet"
         }
-      }
+      },
+      "examples": [
+        {
+          "name": "getPetExample",
+          "description": "get pet example",
+          "params": [
+            {
+              "name": "petId",
+              "value": 7
+            }
+          ],
+          "result": {
+            "name": "getPetExampleResult",
+            "value": {
+              "name": "fluffy",
+              "tag": "poodle",
+              "id": 7
+            }
+          }
+        }
+      ]
     }
   ],
   "components": {
+    "contentDescriptors": {
+      "PetId": {
+        "name": "petId",
+        "required": true,
+        "description": "The id of the pet to retrieve",
+        "schema": {
+          "$ref": "#/components/schemas/PetId"
+        }
+      }
+    },
     "schemas": {
+      "PetId": {
+        "type": "integer",
+        "minimum": 0
+      },
       "Pet": {
         "type": "object",
         "required": [
@@ -134,7 +183,7 @@
         ],
         "properties": {
           "id": {
-            "type": "integer"
+            "$ref": "#/components/schemas/PetId"
           },
           "name": {
             "type": "string"
