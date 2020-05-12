@@ -51,7 +51,7 @@
           "description": "List pet example",
           "params": [
             {
-              "name": "limitExample",
+              "name": "limit",
               "value": 1
             }
           ],
