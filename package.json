@@ -34,7 +34,7 @@
     "lodash": "^4.17.11",
     "ts-jest": "^25.0.0",
     "typescript": "^3.3.3333",
-    "json-schema-ref-parser": "^7.0.1"
+    "json-schema-ref-parser": "^9.0.1"
   },
   "keywords": [
     "open-rpc",
