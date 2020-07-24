@@ -31,7 +31,7 @@
     "@types/node": "^14.0.0",
     "jest": "^25.1.0",
     "ts-jest": "^25.0.0",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.9.7"
   },
   "keywords": [
     "open-rpc",
