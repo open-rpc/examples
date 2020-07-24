@@ -1,19 +1,19 @@
 import openRpcExamples from "./index";
-import { forEach, uniqBy, values } from "lodash";
 
-import refParser from "json-schema-ref-parser";
-import { OpenrpcDocument } from "@open-rpc/meta-schema";
+import { dereferenceDocument } from "@open-rpc/schema-utils-js";
 
 describe("meta-schema validates all examples without error", () => {
   it("has unique titles for each example", () => {
-    const vals = values(openRpcExamples);
-    expect(uniqBy(vals, ({ info }) => info.title).length)
-      .toBe(vals.length);
+    const vals = Object.values(openRpcExamples);
+    const uniqueTitles: any = {};
+    vals.map((v) => { uniqueTitles[v.info.title] = true; });
+
+    expect(Object.keys(uniqueTitles).length).toBe(vals.length);
   });
 
-  forEach(openRpcExamples, (example, name: string) => {
+  Object.entries(openRpcExamples).forEach(([name, example]) => {
     it(`validates the example: ${name}`, async () => {
-      const result = await refParser.dereference(example) as OpenrpcDocument;
+      const result = await dereferenceDocument(example);
       expect(typeof result).toBe("object");
       expect(result.methods.length).toBeGreaterThan(0);
     });
