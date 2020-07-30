@@ -22,11 +22,10 @@
   "files": [
     "build"
   ],
-  "dependencies": {
-    "@open-rpc/meta-schema": "^1.12.5"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@open-rpc/schema-utils-js": "^1.13.4",
+    "@open-rpc/meta-schema": "^1.12.6",
+    "@open-rpc/schema-utils-js": "^1.14.0",
     "@types/jest": "^26.0.7",
     "@types/node": "^14.0.25",
     "jest": "^25.5.4",
