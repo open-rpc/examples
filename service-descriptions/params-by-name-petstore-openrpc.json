@@ -38,7 +38,29 @@
         "schema": {
           "$ref": "#/components/schemas/Pets"
         }
-      }
+      },
+      "examples": [
+        {
+          "name": "listPetExample",
+          "description": "List pet example",
+          "params": [
+            {
+              "name": "limit",
+              "value": 1
+            }
+          ],
+          "result": {
+            "name": "listPetResultExample",
+            "value": [
+              {
+                "id": 7,
+                "name": "fluffy",
+                "tag": "poodle"
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "create_pet",
