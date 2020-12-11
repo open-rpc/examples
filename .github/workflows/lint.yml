@@ -11,7 +11,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.15.1
-    - name: install eslint
+    - name: npm install
       run: npm install
     - name: lint
-      run: ./node_modules/.bin/eslint . --ext .ts
+      run: npm run lint
