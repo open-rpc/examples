@@ -1,0 +1,24 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  reviewers:
+  - BelfordZ
+  - shanejonas
+  assignees:
+  - shanejonas
+  - BelfordZ
+  ignore:
+  - dependency-name: "@open-rpc/meta-schema"
+    versions:
+    - ">= 1.4.a, < 1.5"
+  - dependency-name: "@typescript-eslint/parser"
+    versions:
+    - 4.16.0
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.14.2
+    - 4.15.1
