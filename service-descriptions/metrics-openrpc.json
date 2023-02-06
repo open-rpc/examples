@@ -1,0 +1,46 @@
+{
+  "openrpc": "1.3.0",
+  "info": {
+    "title": "Metrics",
+    "description": "An example of a metrics service that uses notification-only methods",
+    "version": "1.0.0"
+  },
+  "servers": [],
+  "methods": [
+    {
+      "name": "link_clicked",
+      "params": [
+        {
+          "name": "link href",
+          "schema": {
+            "title": "href",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        {
+          "name": "link label",
+          "schema": {
+            "title": "label",
+            "type": "string"
+          }
+        }
+      ],
+      "examples": [
+        {
+          "name": "login link clicked",
+          "params": [
+            {
+              "name": "link href",
+              "value": "https://open-rpc.org"
+            },
+            {
+              "name": "link label",
+              "value": "Visit the OpenRPC Homepage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
